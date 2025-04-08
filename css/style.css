@@ -158,22 +158,172 @@ header p {
     transform: scaleX(1);
 }
 
-.guide-card:nth-child(odd) i {
-    color: var(--accent-1);
-}
-
-.guide-card:nth-child(even) i {
-    color: var(--accent-2);
-}
-
-.guide-card:nth-child(3n) i {
-    color: var(--accent-3);
-}
-
 .guide-card i {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     transition: transform 0.3s ease;
+}
+
+.guide-card .fa-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    background: var(--neutral-100);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    font-size: 2rem;
+}
+
+/* Specific authentic colors for each service icon */
+.guide-card .fa-mobile-alt {
+    color: #000000; /* App Store/Play Store black */
+}
+
+.guide-card .fa-brain {
+    color: #10a37f; /* ChatGPT/OpenAI green */
+}
+
+.guide-card .fa-envelope-open-text {
+    color: #4285f4; /* Gmail blue */
+}
+
+.guide-card .fa-ticket {
+    color: #f44336; /* Travel red */
+}
+
+.guide-card .fa-photo-film {
+    color: #34a853; /* Google Photos green */
+}
+
+.guide-card .fa-file-export {
+    color: #4285f4; /* Cloud/Transfer blue */
+}
+
+.guide-card .fa-location-dot {
+    color: #ea4335; /* Google Maps red */
+}
+
+.guide-card .fa-car-side {
+    color: #276ef1; /* Transport blue */
+}
+
+.guide-card .fa-hashtag {
+    color: #1da1f2; /* Twitter/social media blue */
+}
+
+.guide-card .fa-whatsapp {
+    color: #25d366; /* WhatsApp green */
+}
+
+.guide-card .fa-user-shield {
+    color: #4285f4; /* Google blue */
+}
+
+.guide-card .fa-credit-card {
+    color: #6772e5; /* Banking/Stripe purple */
+}
+
+.guide-card .fa-passport {
+    color: #005e54; /* Document green - official color */
+}
+
+.guide-card .fa-youtube {
+    color: #ff0000; /* YouTube red */
+}
+
+.guide-card:hover .fa-icon {
+    transform: scale(1.1);
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Hover background colors that match the brand */
+.guide-card:hover .fa-mobile-alt {
+    background: #f8f8f8;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.guide-card:hover .fa-brain {
+    background: #f0f7f7;
+    box-shadow: 0 0 15px rgba(16, 163, 127, 0.3);
+}
+
+.guide-card:hover .fa-envelope-open-text {
+    background: #f5f9ff;
+    box-shadow: 0 0 15px rgba(66, 133, 244, 0.3);
+}
+
+.guide-card:hover .fa-ticket {
+    background: #fff5f5;
+    box-shadow: 0 0 15px rgba(244, 67, 54, 0.3);
+}
+
+.guide-card:hover .fa-photo-film {
+    background: #f2f9f5;
+    box-shadow: 0 0 15px rgba(52, 168, 83, 0.3);
+}
+
+.guide-card:hover .fa-file-export {
+    background: #f5f9ff;
+    box-shadow: 0 0 15px rgba(66, 133, 244, 0.3);
+}
+
+.guide-card:hover .fa-location-dot {
+    background: #fef8f8;
+    box-shadow: 0 0 15px rgba(234, 67, 53, 0.3);
+}
+
+.guide-card:hover .fa-car-side {
+    background: #f5f8ff;
+    box-shadow: 0 0 15px rgba(39, 110, 241, 0.3);
+}
+
+.guide-card:hover .fa-hashtag {
+    background: #f5faff;
+    box-shadow: 0 0 15px rgba(29, 161, 242, 0.3);
+}
+
+.guide-card:hover .fa-whatsapp {
+    background: #f0faf5;
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
+}
+
+.guide-card:hover .fa-user-shield {
+    background: #f5f9ff;
+    box-shadow: 0 0 15px rgba(66, 133, 244, 0.3);
+}
+
+.guide-card:hover .fa-credit-card {
+    background: #f8f8ff;
+    box-shadow: 0 0 15px rgba(103, 114, 229, 0.3);
+}
+
+.guide-card:hover .fa-passport {
+    background: #f2f7f7;
+    box-shadow: 0 0 15px rgba(0, 94, 84, 0.3);
+}
+
+.guide-card:hover .fa-youtube {
+    background: #fff5f5;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+/* Remove the generic color patterns based on card position */
+.guide-card:nth-child(3n+1) .fa-icon,
+.guide-card:nth-child(3n+2) .fa-icon,
+.guide-card:nth-child(3n) .fa-icon,
+.guide-card:nth-child(3n+1):hover .fa-icon,
+.guide-card:nth-child(3n+2):hover .fa-icon,
+.guide-card:nth-child(3n):hover .fa-icon {
+    /* This overrides the previous color settings based on position */
+    background: inherit;
+    color: inherit;
+    box-shadow: inherit;
 }
 
 .guide-card:hover {
@@ -296,7 +446,7 @@ footer::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='rgba(255,255,255,0.1)' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='rgba(255,255,255,0.1)' fill-rule='evenodd'/%3E%3C/svg%3E");
     opacity: 0.3;
 }
 
@@ -437,4 +587,146 @@ footer p {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+/* Add this at a high specificity to ensure it overrides other styles */
+.guide-card i.fa-icon {
+    /* Reset any previous styling */
+    background: var(--neutral-100) !important;
+    font-size: 2rem !important;
+}
+
+/* Individual icon colors - using !important to ensure they take precedence */
+.guide-card i.fa-mobile-alt {
+    color: #000000 !important; /* App Store/Play Store black */
+}
+
+.guide-card i.fa-brain {
+    color: #10a37f !important; /* ChatGPT/OpenAI green */
+}
+
+.guide-card i.fa-envelope-open-text {
+    color: #4285f4 !important; /* Gmail blue */
+}
+
+.guide-card i.fa-ticket {
+    color: #f44336 !important; /* Travel red */
+}
+
+.guide-card i.fa-photo-film {
+    color: #34a853 !important; /* Google Photos green */
+}
+
+.guide-card i.fa-file-export {
+    color: #4285f4 !important; /* Cloud/Transfer blue */
+}
+
+.guide-card i.fa-location-dot {
+    color: #ea4335 !important; /* Google Maps red */
+}
+
+.guide-card i.fa-car-side {
+    color: #276ef1 !important; /* Transport blue */
+}
+
+.guide-card i.fa-hashtag {
+    color: #1da1f2 !important; /* Twitter/social media blue */
+}
+
+.guide-card i.fa-whatsapp {
+    color: #25d366 !important; /* WhatsApp green */
+}
+
+.guide-card i.fa-user-shield {
+    color: #4285f4 !important; /* Google blue */
+}
+
+.guide-card i.fa-credit-card {
+    color: #6772e5 !important; /* Banking/Stripe purple */
+}
+
+.guide-card i.fa-passport {
+    color: #005e54 !important; /* Document green - official color */
+}
+
+.guide-card i.fa-youtube {
+    color: #ff0000 !important; /* YouTube red */
+}
+
+/* Hover styles with !important to ensure they apply */
+.guide-card:hover i.fa-icon {
+    transform: scale(1.1) !important;
+    background: white !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Individual hover background colors */
+.guide-card:hover i.fa-mobile-alt {
+    background: #f8f8f8 !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.guide-card:hover i.fa-brain {
+    background: #f0f7f7 !important;
+    box-shadow: 0 0 15px rgba(16, 163, 127, 0.3) !important;
+}
+
+.guide-card:hover i.fa-envelope-open-text {
+    background: #f5f9ff !important;
+    box-shadow: 0 0 15px rgba(66, 133, 244, 0.3) !important;
+}
+
+.guide-card:hover i.fa-ticket {
+    background: #fff5f5 !important;
+    box-shadow: 0 0 15px rgba(244, 67, 54, 0.3) !important;
+}
+
+.guide-card:hover i.fa-photo-film {
+    background: #f2f9f5 !important;
+    box-shadow: 0 0 15px rgba(52, 168, 83, 0.3) !important;
+}
+
+.guide-card:hover i.fa-file-export {
+    background: #f5f9ff !important;
+    box-shadow: 0 0 15px rgba(66, 133, 244, 0.3) !important;
+}
+
+.guide-card:hover i.fa-location-dot {
+    background: #fef8f8 !important;
+    box-shadow: 0 0 15px rgba(234, 67, 53, 0.3) !important;
+}
+
+.guide-card:hover i.fa-car-side {
+    background: #f5f8ff !important;
+    box-shadow: 0 0 15px rgba(39, 110, 241, 0.3) !important;
+}
+
+.guide-card:hover i.fa-hashtag {
+    background: #f5faff !important;
+    box-shadow: 0 0 15px rgba(29, 161, 242, 0.3) !important;
+}
+
+.guide-card:hover i.fa-whatsapp {
+    background: #f0faf5 !important;
+    box-shadow: 0 0 15px rgba(37, 211, 102, 0.3) !important;
+}
+
+.guide-card:hover i.fa-user-shield {
+    background: #f5f9ff !important;
+    box-shadow: 0 0 15px rgba(66, 133, 244, 0.3) !important;
+}
+
+.guide-card:hover i.fa-credit-card {
+    background: #f8f8ff !important;
+    box-shadow: 0 0 15px rgba(103, 114, 229, 0.3) !important;
+}
+
+.guide-card:hover i.fa-passport {
+    background: #f2f7f7 !important;
+    box-shadow: 0 0 15px rgba(0, 94, 84, 0.3) !important;
+}
+
+.guide-card:hover i.fa-youtube {
+    background: #fff5f5 !important;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3) !important;
 }
