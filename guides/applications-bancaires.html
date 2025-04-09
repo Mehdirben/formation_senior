@@ -4,16 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guide d'utilisation des applications bancaires | Guide Numérique pour Seniors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .guide-content::before {
+            background: linear-gradient(135deg, #6772e5, #9ba1ff);
+        }
+        .guide-content h2 {
+            color: #6772e5;
+        }
+        .step {
+            background: linear-gradient(to right, rgba(103, 114, 229, 0.1), transparent);
+            border-left: 4px solid #6772e5;
+        }
+        .step h3 {
+            color: #6772e5;
+        }
+        .tips h3 {
+            color: #6772e5;
+        }
+        .btn.btn-primary {
+            background: linear-gradient(135deg, #6772e5, #9ba1ff);
+        }
+        .btn.btn-primary::before {
+            background: linear-gradient(135deg, #4a55d2, #6772e5);
+        }
+    </style>
 </head>
-<body>
-    <header>
+<body class="guide-page">
+    <nav class="navbar">
         <div class="container">
-            <h1>Guide Numérique pour Seniors</h1>
-            <p>Apprenez à utiliser les technologies modernes facilement</p>
+            <div class="navbar-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>SeniorTech</span>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="../index.html#home">Accueil</a></li>
+                <li><a href="../index.html#guides">Guides</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <div class="container">
         <div class="guide-content">
@@ -207,15 +245,15 @@
             
             <p class="note"><strong>Note importante</strong> : Les interfaces des applications bancaires peuvent varier légèrement selon les établissements, mais les principes généraux restent les mêmes. Si vous avez des difficultés, n'hésitez pas à demander de l'aide à votre conseiller bancaire.</p>
             
-            <a href="../index.html#guides" class="btn"><i class="fas fa-arrow-left"></i> Retour aux guides</a>
+            <a href="../index.html#guides" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Retour aux guides</a>
         </div>
+    </div>    <div class="copyright">
+        <p>&copy; 2025 Guide Numérique pour Seniors. Tous droits réservés.</p>
     </div>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Guide Numérique pour Seniors. Tous droits réservés.</p>
-        </div>
-    </footer>
+    
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <script src="../js/script.js"></script>
 </body>

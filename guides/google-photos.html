@@ -4,16 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guide d'utilisation de Google Photos | Guide Numérique pour Seniors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .guide-content::before {
+            background: linear-gradient(135deg, #34a853, #5dc278);
+        }
+        .guide-content h2 {
+            color: #34a853;
+        }
+        .step {
+            background: linear-gradient(to right, rgba(52, 168, 83, 0.1), transparent);
+            border-left: 4px solid #34a853;
+        }
+        .step h3 {
+            color: #34a853;
+        }
+        .tips h3 {
+            color: #34a853;
+        }
+        .btn.btn-primary {
+            background: linear-gradient(135deg, #34a853, #5dc278);
+        }
+        .btn.btn-primary::before {
+            background: linear-gradient(135deg, #1e7e34, #34a853);
+        }
+    </style>
 </head>
-<body>
-    <header>
+<body class="guide-page">
+    <nav class="navbar">
         <div class="container">
-            <h1>Guide Numérique pour Seniors</h1>
-            <p>Apprenez à utiliser les technologies modernes facilement</p>
+            <div class="navbar-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>SeniorTech</span>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="../index.html#home">Accueil</a></li>
+                <li><a href="../index.html#guides">Guides</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <div class="container">
         <div class="guide-content">
@@ -211,15 +249,15 @@
             
             <p class="note"><strong>Note importante</strong> : Vos photos sont privées par défaut et ne sont visibles que par vous, sauf si vous choisissez de les partager. Vérifiez régulièrement vos paramètres de confidentialité dans le menu Paramètres.</p>
             
-            <a href="../index.html#guides" class="btn"><i class="fas fa-arrow-left"></i> Retour aux guides</a>
+            <a href="../index.html#guides" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Retour aux guides</a>
         </div>
+    </div>    <div class="copyright">
+        <p>&copy; 2025 Guide Numérique pour Seniors. Tous droits réservés.</p>
     </div>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Guide Numérique pour Seniors. Tous droits réservés.</p>
-        </div>
-    </footer>
+    
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <script src="../js/script.js"></script>
 </body>

@@ -1,23 +1,58 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guide d'utilisation des Assistants IA | Guide Numérique pour Seniors</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .guide-content::before {
+            background: linear-gradient(135deg, #10a37f, #16b892);
+        }
+        .guide-content h2 {
+            color: #10a37f;
+        }
+        .step {
+            background: linear-gradient(to right, rgba(16, 163, 127, 0.1), transparent);
+            border-left: 4px solid #10a37f;
+        }
+        .step h3 {
+            color: #10a37f;
+        }
+        .tips h3 {
+            color: #10a37f;
+        }
+        .btn.btn-primary {
+            background: linear-gradient(135deg, #10a37f, #16b892);
+        }
+        .btn.btn-primary::before {
+            background: linear-gradient(135deg, #0c7a5f, #10a37f);
+        }
+    </style>
 </head>
-<body>
-    <header>
+<body class="guide-page">    <nav class="navbar">
         <div class="container">
-            <h1>Guide Numérique pour Seniors</h1>
-            <p>Apprenez à utiliser les technologies modernes facilement</p>
+            <div class="navbar-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>SeniorTech</span>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="../index.html#home">Accueil</a></li>
+                <li><a href="../index.html#guides">Guides</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <div class="container">
         <div class="guide-content">
-            <h2><i class="fas fa-robot"></i> Comment utiliser les Assistants IA</h2>
+            <h2><i class="fas fa-brain"></i> Comment utiliser les Assistants IA</h2>
             
             <p>Les assistants intelligents comme ChatGPT et Gemini peuvent répondre à vos questions et vous aider dans de nombreuses tâches quotidiennes. Ce guide vous explique comment utiliser ces deux outils d'intelligence artificielle populaires sur ordinateur et sur mobile.</p>
             
@@ -203,15 +238,15 @@
             
             <p class="note"><strong>Note importante</strong> : Les assistants IA comme ChatGPT et Gemini peuvent parfois commettre des erreurs ou inventer des informations. Pour les questions importantes (santé, finances, légales), vérifiez toujours les informations reçues auprès de sources officielles ou de professionnels qualifiés.</p>
             
-            <a href="../index.html#guides" class="btn"><i class="fas fa-arrow-left"></i> Retour aux guides</a>
+            <a href="../index.html#guides" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Retour aux guides</a>
         </div>
+    </div>    <div class="copyright">
+        <p>&copy; 2025 Guide Numérique pour Seniors. Tous droits réservés.</p>
     </div>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Guide Numérique pour Seniors. Tous droits réservés.</p>
-        </div>
-    </footer>
+    
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <script src="../js/script.js"></script>
 </body>

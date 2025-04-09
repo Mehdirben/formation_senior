@@ -6,127 +6,211 @@
     <title>Guide Numérique pour Seniors</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <header>
+    <nav class="navbar">
         <div class="container">
-            <h1>Guide Numérique pour Seniors</h1>
-            <p>Apprenez à utiliser les technologies modernes facilement</p>
+            <div class="navbar-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>SeniorTech</span>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="#home" class="active">Accueil</a></li>
+                <li><a href="#guides">Guides</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Guide Numérique pour Seniors</h1>
+                <p>Apprenez à utiliser les technologies modernes facilement</p>
+                <a href="#guides" class="btn btn-primary">Découvrir les guides</a>
+            </div>
         </div>
     </header>
 
     <section id="guides" class="guides">
         <div class="container">
+            <div class="section-header">
+                <h2>Nos Guides Pratiques</h2>
+                <p>Des tutoriels simples et clairs pour vous aider à naviguer dans le monde numérique</p>
+            </div>
             <div class="guide-container">
                 <div class="guide-card">
-                    <i class="fas fa-mobile-alt fa-icon"></i>
-                    <h3>Télécharger des Applications</h3>
-                    <p>Comment installer des applications sur smartphone, tablette et ordinateur.</p>
-                    <a href="guides/telecharger-applications.html" class="btn">Voir le guide</a>
+                    <div class="card-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Télécharger des Applications</h3>
+                        <p>Comment installer des applications sur smartphone, tablette et ordinateur.</p>
+                        <a href="guides/telecharger-applications.html" class="btn">Voir le guide</a>
+                    </div>
                 </div>
                 
                 <div class="guide-card">
-                    <i class="fas fa-brain fa-icon"></i>
-                    <h3>Assistants IA</h3>
-                    <p>Apprenez à utiliser ChatGPT et Gemini pour obtenir des réponses à vos questions.</p>
-                    <a href="guides/assistants-ia.html" class="btn">Voir le guide</a>
+                    <div class="card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Assistants IA</h3>
+                        <p>Apprenez à utiliser ChatGPT et Gemini pour obtenir des réponses à vos questions.</p>
+                        <a href="guides/assistants-ia.html" class="btn">Voir le guide</a>
+                    </div>
                 </div>
                 
                 <div class="guide-card">
-                    <i class="fas fa-envelope-open-text fa-icon"></i>
-                    <h3>Envoyer un Email</h3>
-                    <p>Guide complet pour créer, envoyer et gérer vos emails.</p>
-                    <a href="guides/email.html" class="btn">Voir le guide</a>
+                    <div class="card-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Envoyer un Email</h3>
+                        <p>Guide complet pour créer, envoyer et gérer vos emails.</p>
+                        <a href="guides/email.html" class="btn">Voir le guide</a>
+                    </div>
                 </div>
                 
                 <div class="guide-card">
-                    <i class="fas fa-ticket fa-icon"></i>
-                    <h3>Acheter des billets en ligne</h3>
-                    <p>Comment acheter des billets de train (ONCF), de bus (CTM) et d'avion sur Internet.</p>
-                    <a href="guides/billets-en-ligne.html" class="btn">Voir le guide</a>
+                    <div class="card-icon">
+                        <i class="fas fa-ticket"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Acheter des billets en ligne</h3>
+                        <p>Comment acheter des billets de train (ONCF), de bus (CTM) et d'avion sur Internet.</p>
+                        <a href="guides/billets-en-ligne.html" class="btn">Voir le guide</a>
+                    </div>
                 </div>
                 
                 <div class="guide-card">
-                    <i class="fas fa-photo-film fa-icon"></i>
-                    <h3>Google Photos</h3>
-                    <p>Gérez et partagez facilement vos photos avec Google Photos.</p>
-                    <a href="guides/google-photos.html" class="btn">Voir le guide</a>
+                    <div class="card-icon">
+                        <i class="fas fa-photo-film"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Google Photos</h3>
+                        <p>Gérez et partagez facilement vos photos avec Google Photos.</p>
+                        <a href="guides/google-photos.html" class="btn">Voir le guide</a>
+                    </div>
                 </div>
                 
                 <div class="guide-card">
-                    <i class="fas fa-file-export fa-icon"></i>
-                    <h3>Transfert d'images</h3>
-                    <p>Comment transférer des photos de votre téléphone vers une clé USB.</p>
-                    <a href="guides/transfert-images.html" class="btn">Voir le guide</a>
+                    <div class="card-icon">
+                        <i class="fas fa-file-export"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Transfert d'images</h3>
+                        <p>Comment transférer des photos de votre téléphone vers une clé USB.</p>
+                        <a href="guides/transfert-images.html" class="btn">Voir le guide</a>
+                    </div>
                 </div>
                 
                 <div class="guide-card">
-                    <i class="fas fa-location-dot fa-icon"></i>
-                    <h3>Navigation GPS et cartes</h3>
-                    <p>Apprenez à utiliser Google Maps et d'autres applications de navigation pour vous orienter facilement.</p>
-                    <a href="guides/navigation-gps.html" class="btn">Voir le guide</a>
+                    <div class="card-icon">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Navigation GPS et cartes</h3>
+                        <p>Apprenez à utiliser Google Maps et d'autres applications de navigation pour vous orienter facilement.</p>
+                        <a href="guides/navigation-gps.html" class="btn">Voir le guide</a>
+                    </div>
                 </div>
                 
                 <div class="guide-card">
-                    <i class="fas fa-car-side fa-icon"></i>
-                    <h3>Applications de transport</h3>
-                    <p>Comment utiliser InDrive et d'autres applications pour vos déplacements quotidiens.</p>
-                    <a href="guides/applications-transport.html" class="btn">Voir le guide</a>
+                    <div class="card-icon">
+                        <i class="fas fa-car-side"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Applications de transport</h3>
+                        <p>Comment utiliser InDrive et d'autres applications pour vos déplacements quotidiens.</p>
+                        <a href="guides/applications-transport.html" class="btn">Voir le guide</a>
+                    </div>
                 </div>
                 
                 <div class="guide-card">
-                    <i class="fas fa-hashtag fa-icon"></i>
-                    <h3>Réseaux Sociaux</h3>
-                    <p>Guide pour utiliser Facebook, Instagram et autres réseaux sociaux.</p>
-                    <a href="guides/reseaux-sociaux.html" class="btn">Voir le guide</a>
+                    <div class="card-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Réseaux Sociaux</h3>
+                        <p>Guide pour utiliser Facebook, Instagram et autres réseaux sociaux.</p>
+                        <a href="guides/reseaux-sociaux.html" class="btn">Voir le guide</a>
+                    </div>
                 </div>
                 
                 <div class="guide-card">
-                    <i class="fab fa-whatsapp fa-icon"></i>
-                    <h3>Sauvegarde WhatsApp</h3>
-                    <p>Comment sauvegarder vos conversations et médias WhatsApp.</p>
-                    <a href="guides/backup-whatsapp.html" class="btn">Voir le guide</a>
+                    <div class="card-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Sauvegarde WhatsApp</h3>
+                        <p>Comment sauvegarder vos conversations et médias WhatsApp.</p>
+                        <a href="guides/backup-whatsapp.html" class="btn">Voir le guide</a>
+                    </div>
                 </div>
 
                 <div class="guide-card">
-                    <i class="fas fa-user-shield fa-icon"></i>
-                    <h3>Gérer Compte Google</h3>
-                    <p>Comment modifier vos informations et sécuriser votre compte Google.</p>
-                    <a href="guides/compte-google.html" class="btn">Voir le guide</a>
+                    <div class="card-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Gérer Compte Google</h3>
+                        <p>Comment modifier vos informations et sécuriser votre compte Google.</p>
+                        <a href="guides/compte-google.html" class="btn">Voir le guide</a>
+                    </div>
                 </div>
                 
                 <div class="guide-card">
-                    <i class="fas fa-credit-card fa-icon"></i>
-                    <h3>Applications Bancaires</h3>
-                    <p>Comment utiliser les applications bancaires pour consulter vos comptes et faire des virements.</p>
-                    <a href="guides/applications-bancaires.html" class="btn">Voir le guide</a>
+                    <div class="card-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Applications Bancaires</h3>
+                        <p>Comment utiliser les applications bancaires pour consulter vos comptes et faire des virements.</p>
+                        <a href="guides/applications-bancaires.html" class="btn">Voir le guide</a>
+                    </div>
                 </div>
 
                 <div class="guide-card">
-                    <i class="fas fa-passport fa-icon"></i>
-                    <h3>Wraqi et e-ID Maroc</h3>
-                    <p>Comment utiliser Wraqi pour obtenir des documents administratifs et gérer votre identité numérique marocaine.</p>
-                    <a href="guides/wraqi-eid.html" class="btn">Voir le guide</a>
+                    <div class="card-icon">
+                        <i class="fas fa-passport"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Wraqi et e-ID Maroc</h3>
+                        <p>Comment utiliser Wraqi pour obtenir des documents administratifs et gérer votre identité numérique marocaine.</p>
+                        <a href="guides/wraqi-eid.html" class="btn">Voir le guide</a>
+                    </div>
                 </div>
                 
                 <div class="guide-card">
-                    <i class="fab fa-youtube fa-icon"></i>
-                    <h3>YouTube Avancé</h3>
-                    <p>Créez des playlists, partagez des vidéos et profitez pleinement de toutes les fonctionnalités de YouTube.</p>
-                    <a href="guides/youtube-avance.html" class="btn">Voir le guide</a>
+                    <div class="card-icon">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>YouTube</h3>
+                        <p>Créez des playlists, partagez des vidéos et profitez pleinement de toutes les fonctionnalités de YouTube.</p>
+                        <a href="guides/youtube-avance.html" class="btn">Voir le guide</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Guide Numérique pour Seniors. Tous droits réservés.</p>
-        </div>
-    </footer>
+    <div class="copyright">
+        <p>&copy; 2025 Guide Numérique pour Seniors. Tous droits réservés.</p>
+    </div>
+
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

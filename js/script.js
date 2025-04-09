@@ -1,19 +1,151 @@
-// Form submission handler
+// Modern JavaScript with enhanced functionality
 document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.querySelector('.contact form');
+    // Navbar scroll effect
+    const navbar = document.querySelector('.navbar');
+    const backToTop = document.querySelector('.back-to-top');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbarMenu = document.querySelector('.navbar-menu');
+      // Handle navbar scroll effect and guide page detection
+    function handleScroll() {
+        // Check if this is a guide page (no hero section)
+        const isGuidePage = !document.querySelector('.hero');
+        
+        // Apply scrolled class for guide pages immediately
+        if (isGuidePage) {
+            navbar.classList.add('scrolled');
+        } else if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+        
+        // Show/hide back to top button
+        if (window.scrollY > 50 && backToTop) {
+            backToTop.classList.add('show');
+        } else if (backToTop) {
+            backToTop.classList.remove('show');
+        }
+        
+        // Active menu handling on scroll
+        const sections = document.querySelectorAll('section, header');
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (pageYOffset >= sectionTop - 150) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        document.querySelectorAll('.navbar-menu a').forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+    
+    // Mobile menu toggle
+    if (menuToggle) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navbarMenu.classList.toggle('active');
+        });
+    }
+    
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.navbar-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navbarMenu.classList.remove('active');
+        });
+    });
+    
+    // Back to top button functionality
+    if (backToTop) {
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    // Scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    
+    // Trigger scroll once on page load
+    handleScroll();
+    
+    // Smooth scrolling for anchor links
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Form submission handler with validation
+    const contactForm = document.querySelector('.contact-form');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
             
             // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
             
             // Simple validation
-            if (!name || !email || !message) {
-                alert('Veuillez remplir tous les champs du formulaire.');
+            let isValid = true;
+            let errorMessage = '';
+            
+            if (!name) {
+                isValid = false;
+                errorMessage += 'Le nom est requis.\n';
+                document.getElementById('name').classList.add('error');
+            } else {
+                document.getElementById('name').classList.remove('error');
+            }
+            
+            if (!email) {
+                isValid = false;
+                errorMessage += 'L\'email est requis.\n';
+                document.getElementById('email').classList.add('error');
+            } else if (!isValidEmail(email)) {
+                isValid = false;
+                errorMessage += 'Veuillez entrer un email valide.\n';
+                document.getElementById('email').classList.add('error');
+            } else {
+                document.getElementById('email').classList.remove('error');
+            }
+            
+            if (!message) {
+                isValid = false;
+                errorMessage += 'Le message est requis.\n';
+                document.getElementById('message').classList.add('error');
+            } else {
+                document.getElementById('message').classList.remove('error');
+            }
+            
+            if (!isValid) {
+                alert(errorMessage);
                 return;
             }
             
@@ -26,46 +158,54 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    // Smooth scrolling for anchor links
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    // Email validation helper
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
     
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
+    // Add card animation on scroll
+    const animateCards = () => {
+        const cards = document.querySelectorAll('.guide-card');
+        cards.forEach(card => {
+            const cardPosition = card.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
             
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 70,
-                    behavior: 'smooth'
-                });
+            if (cardPosition < screenPosition) {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
             }
         });
-    });
-});
-
-// Active menu handling
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('nav ul li a');
+    };
     
-    let current = '';
+    // Animation for section headers
+    const animateSectionHeaders = () => {
+        const headers = document.querySelectorAll('.section-header');
+        headers.forEach(header => {
+            const headerPosition = header.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2;
+            
+            if (headerPosition < screenPosition) {
+                header.style.opacity = '1';
+                header.style.transform = 'translateY(0)';
+            }
+        });
+    };
     
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (pageYOffset >= sectionTop - 100) {
-            current = section.getAttribute('id');
-        }
+    // Initialize section headers with opacity 0
+    document.querySelectorAll('.section-header').forEach(header => {
+        header.style.opacity = '0';
+        header.style.transform = 'translateY(20px)';
+        header.style.transition = 'all 0.5s ease';
     });
     
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-            link.classList.add('active');
-        }
+    // Call animations on scroll
+    window.addEventListener('scroll', () => {
+        animateCards();
+        animateSectionHeaders();
     });
+    
+    // Call animations once on page load
+    animateCards();
+    animateSectionHeaders();
 });

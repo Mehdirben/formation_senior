@@ -4,16 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guide d'achat de billets en ligne | Guide Numérique pour Seniors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .guide-content::before {
+            background: linear-gradient(135deg, #f44336, #ff7961);
+        }
+        .guide-content h2 {
+            color: #f44336;
+        }
+        .step {
+            background: linear-gradient(to right, rgba(244, 67, 54, 0.1), transparent);
+            border-left: 4px solid #f44336;
+        }
+        .step h3 {
+            color: #f44336;
+        }
+        .tips h3 {
+            color: #f44336;
+        }
+        .btn.btn-primary {
+            background: linear-gradient(135deg, #f44336, #ff7961);
+        }
+        .btn.btn-primary::before {
+            background: linear-gradient(135deg, #d32f2f, #f44336);
+        }
+    </style>
 </head>
-<body>
-    <header>
+<body class="guide-page">
+    <nav class="navbar">
         <div class="container">
-            <h1>Guide Numérique pour Seniors</h1>
-            <p>Apprenez à utiliser les technologies modernes facilement</p>
+            <div class="navbar-brand">
+                <i class="fas fa-graduation-cap"></i>
+                <span>SeniorTech</span>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="../index.html#home">Accueil</a></li>
+                <li><a href="../index.html#guides">Guides</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
 
     <div class="container">
         <div class="guide-content">
@@ -313,16 +351,17 @@
             </div>
             
             <p class="note"><strong>Note importante</strong> : Les interfaces des sites peuvent changer avec le temps. Si vous ne retrouvez pas exactement les mêmes écrans, ne vous inquiétez pas : la logique générale reste la même (recherche, sélection, renseignement des informations, paiement).</p>
-            
-            <a href="../index.html#guides" class="btn"><i class="fas fa-arrow-left"></i> Retour aux guides</a>
+              <a href="../index.html#guides" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Retour aux guides</a>
         </div>
     </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Guide Numérique pour Seniors. Tous droits réservés.</p>
-        </div>
-    </footer>
+    <div class="copyright">
+        <p>&copy; 2025 Guide Numérique pour Seniors. Tous droits réservés.</p>
+    </div>
+    
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
     <script src="../js/script.js"></script>
 </body>
