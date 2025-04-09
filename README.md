@@ -1,29 +1,29 @@
-# Guide Numérique pour Seniors
+# Digital Guide for Seniors
 
-Un site web éducatif conçu pour aider les seniors à mieux comprendre et utiliser les technologies numériques modernes.
+An educational website designed to help seniors better understand and use modern digital technologies.
 
 ## Description
 
-Ce projet offre une collection de guides détaillés et faciles à suivre sur divers sujets technologiques, notamment :
-- Utilisation des applications mobiles
-- Gestion des emails
-- Utilisation des réseaux sociaux
-- Sauvegarde de photos et messages
-- Utilisation d'intelligences artificielles (ChatGPT, Gemini)
-- Navigation GPS
-- Réservation de billets en ligne
-- Applications bancaires et de transport
-- Et plus encore...
+This project offers a collection of detailed and easy-to-follow guides on various technological topics, including:
+- Using mobile applications
+- Managing emails
+- Using social networks
+- Backing up photos and messages
+- Using artificial intelligence tools (ChatGPT, Gemini)
+- GPS navigation
+- Booking tickets online
+- Banking and transportation apps
+- And much more...
 
-## Structure du Projet
+## Project Structure
 
 ```
 formation_senior/
 ├── css/
-│   └── style.css         # Styles principaux
+│   └── style.css         # Main styles
 ├── js/
-│   └── script.js         # Scripts JavaScript
-├── guides/              # Pages de guides détaillés
+│   └── script.js         # JavaScript scripts
+├── guides/              # Detailed guide pages
 │   ├── applications-bancaires.html
 │   ├── applications-transport.html
 │   ├── assistants-ia.html
@@ -38,28 +38,28 @@ formation_senior/
 │   ├── transfert-images.html
 │   ├── wraqi-eid.html
 │   └── youtube-avance.html
-└── index.html           # Page d'accueil
+└── index.html           # Homepage
 ```
 
-## Caractéristiques
+## Features
 
-- Design responsive adapté aux seniors
-- Interface claire et intuitive
-- Gros boutons et texte lisible
-- Navigation simplifiée
-- Instructions détaillées étape par étape
-- Illustrations et captures d'écran explicatives
-- Conseils pratiques et astuces
+- Senior-friendly responsive design
+- Clear and intuitive interface
+- Large buttons and readable text
+- Simplified navigation
+- Detailed step-by-step instructions
+- Explanatory illustrations and screenshots
+- Practical tips and tricks
 
 ## Installation
 
-1. Clonez ce dépôt :
+1. Clone this repository:
 ```bash
 git clone https://github.com/mehdirben/formation_senior.git
 ```
 
-2. Ouvrez le fichier `index.html` dans votre navigateur pour commencer à explorer le site.
+2. Open the `index.html` file in your browser to start exploring the site.
 
-## Mise à jour
+## Update
 
-Dernière mise à jour : 9 avril 2025
+Last updated: April 9, 2025
