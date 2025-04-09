@@ -10,6 +10,9 @@ Ce projet offre une collection de guides détaillés et faciles à suivre sur di
 - Utilisation des réseaux sociaux
 - Sauvegarde de photos et messages
 - Utilisation d'intelligences artificielles (ChatGPT, Gemini)
+- Navigation GPS
+- Réservation de billets en ligne
+- Applications bancaires et de transport
 - Et plus encore...
 
 ## Structure du Projet
@@ -21,14 +24,20 @@ formation_senior/
 ├── js/
 │   └── script.js         # Scripts JavaScript
 ├── guides/              # Pages de guides détaillés
+│   ├── applications-bancaires.html
+│   ├── applications-transport.html
+│   ├── assistants-ia.html
 │   ├── backup-whatsapp.html
-│   ├── chatgpt.html
+│   ├── billets-en-ligne.html
+│   ├── compte-google.html
 │   ├── email.html
-│   ├── gemini.html
 │   ├── google-photos.html
+│   ├── navigation-gps.html
 │   ├── reseaux-sociaux.html
 │   ├── telecharger-applications.html
-│   └── transfert-images.html 
+│   ├── transfert-images.html
+│   ├── wraqi-eid.html
+│   └── youtube-avance.html
 └── index.html           # Page d'accueil
 ```
 
@@ -49,18 +58,8 @@ formation_senior/
 git clone https://github.com/mehdirben/formation_senior.git
 ```
 
-2. Ouvrez `index.html` dans votre navigateur pour voir le site
+2. Ouvrez le fichier `index.html` dans votre navigateur pour commencer à explorer le site.
 
-## Contribution
+## Mise à jour
 
-Les contributions sont les bienvenues ! Pour contribuer :
-
-1. Fork ce dépôt
-2. Créez une nouvelle branche : `git checkout -b nouvelle-fonctionnalite`
-3. Committez vos changements : `git commit -m 'Ajout d'une nouvelle fonctionnalité'`
-4. Push vers la branche : `git push origin nouvelle-fonctionnalite`
-5. Ouvrez une Pull Request
-
-## Contact
-
-Pour toute question ou suggestion, n'hésitez pas à ouvrir une issue sur ce dépôt.
+Dernière mise à jour : 9 avril 2025
