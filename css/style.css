@@ -60,6 +60,11 @@ body {
     text-align: center;
 }
 
+/* Prevent body scroll when mobile menu is open */
+body.menu-open {
+    overflow: hidden;
+}
+
 .container {
     width: 90%;
     max-width: 1280px;
@@ -209,6 +214,17 @@ a:hover {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    transition: background-color var(--animation-fast) ease;
+}
+
+.menu-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-toggle:active {
+    transform: scale(0.95);
 }
 
 .bar {
@@ -218,6 +234,8 @@ a:hover {
     margin: 3px 0;
     transition: all var(--animation-medium) ease;
     border-radius: var(--radius-full);
+    transform-origin: center;
+    will-change: transform, opacity;
 }
 
 .navbar.scrolled .bar {
@@ -751,19 +769,21 @@ a:focus, button:focus, input:focus, textarea:focus {
     .navbar-menu {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: 0;
         width: 70%;
         height: 100vh;
         background-color: white;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transition: right var(--animation-medium) ease;
+        transform: translateX(100%);
+        transition: transform var(--animation-medium) ease;
         box-shadow: var(--shadow-lg);
+        will-change: transform;
     }
 
     .navbar-menu.active {
-        right: 0;
+        transform: translateX(0);
     }
 
     .navbar-menu li {
@@ -774,6 +794,17 @@ a:focus, button:focus, input:focus, textarea:focus {
     .navbar.scrolled .navbar-menu a {
         color: var(--neutral-800);
         font-size: 1.2rem;
+    }
+
+    /* Fix mobile menu hover/active states - ensure text stays visible */
+    .navbar-menu a:hover,
+    .navbar-menu a.active,
+    .navbar.scrolled .navbar-menu a:hover,
+    .navbar.scrolled .navbar-menu a.active {
+        color: var(--primary-color);
+        background-color: var(--neutral-100);
+        padding: 0.5rem 1rem;
+        border-radius: var(--radius-md);
     }
 
     .menu-toggle.active .bar:nth-child(1) {
